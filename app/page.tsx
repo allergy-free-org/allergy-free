@@ -12,9 +12,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
+              <Image src="/light-icon.png" alt="Allergy Free" width={48} height={48} />
               <div>
                 <h1 className="text-xl font-bold text-gray-900">Allergy Free</h1>
                 <p className="text-xs text-gray-600">Centro de Alergias</p>
@@ -297,9 +295,9 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          {/* <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 Allergy Free. Todos los derechos reservados.</p>
-          </div>
+          </div> */}
         </div>
       </footer>
     </div>
