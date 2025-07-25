@@ -300,8 +300,17 @@ ${formData.mensaje}`
                 <CardDescription>Av. Guardia Civil 337, San Borja</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-600">Mapa de San Borja</p>
+                <div className="h-64 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.9647!2d-77.0019!3d-12.0464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce8c8c8c8c8c%3A0x8c8c8c8c8c8c8c8c!2sAv.%20Guardia%20Civil%20337%2C%20San%20Borja%2C%20Lima%2C%20Peru!5e0!3m2!1sen!2spe!4v1234567890"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Clínica SANNA San Borja"
+                  />
                 </div>
               </CardContent>
             </Card>
@@ -312,8 +321,17 @@ ${formData.mensaje}`
                 <CardDescription>Av. Guardia Civil 770, San Isidro</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-600">Mapa de San Isidro</p>
+                <div className="h-64 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.9647!2d-77.0019!3d-12.0464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce8c8c8c8c8c%3A0x8c8c8c8c8c8c8c8c!2sAv.%20Guardia%20Civil%20770%2C%20San%20Isidro%2C%20Lima%2C%20Peru!5e0!3m2!1sen!2spe!4v1234567890"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Consultorio San Isidro"
+                  />
                 </div>
               </CardContent>
             </Card>
