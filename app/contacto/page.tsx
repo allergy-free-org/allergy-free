@@ -1,0 +1,325 @@
+"use client"
+
+import type React from "react"
+
+import { useState } from "react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { ArrowLeft, Shield, MapPin, Phone, Clock, Mail, Facebook } from "lucide-react"
+
+export default function ContactoPage() {
+  const [formData, setFormData] = useState({
+    nombre: "",
+    email: "",
+    telefono: "",
+    asunto: "",
+    mensaje: "",
+  })
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    const mensaje = `Hola, me contacto desde la web:
+    
+Nombre: ${formData.nombre}
+Email: ${formData.email}
+Teléfono: ${formData.telefono}
+Asunto: ${formData.asunto}
+
+Mensaje:
+${formData.mensaje}`
+
+    const whatsappUrl = `https://wa.me/51982915613?text=${encodeURIComponent(mensaje)}`
+    window.open(whatsappUrl, "_blank")
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Navigation */}
+      <nav className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <Link href="/" className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold text-gray-900">Allergy Free</h1>
+                <p className="text-xs text-gray-600">Centro de Alergias</p>
+              </div>
+            </Link>
+            <div className="hidden md:flex space-x-6">
+              <Link href="/" className="text-gray-700 hover:text-blue-600">
+                Inicio
+              </Link>
+              <Link href="/servicios" className="text-gray-700 hover:text-blue-600">
+                Servicios
+              </Link>
+              <Link href="/equipo" className="text-gray-700 hover:text-blue-600">
+                Equipo
+              </Link>
+              <Link href="/faq" className="text-gray-700 hover:text-blue-600">
+                FAQ
+              </Link>
+              <Link href="/noticias" className="text-gray-700 hover:text-blue-600">
+                Noticias
+              </Link>
+              <Link href="/contacto" className="text-blue-600 font-medium">
+                Contacto
+              </Link>
+            </div>
+            <Link href="/reservar">
+              <Button className="bg-blue-600 hover:bg-blue-700">Reservar Cita</Button>
+            </Link>
+          </div>
+        </div>
+      </nav>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <div className="mb-12">
+          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Volver al inicio
+          </Link>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Contacto</h1>
+          <p className="text-xl text-gray-600 max-w-3xl">
+            Estamos aquí para ayudarte. Contáctanos para resolver tus dudas, agendar una cita o recibir más información
+            sobre nuestros servicios.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div>
+            <Card>
+              <CardHeader>
+                <CardTitle>Envíanos un mensaje</CardTitle>
+                <CardDescription>Completa el formulario y nos pondremos en contacto contigo</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="nombre">Nombre completo *</Label>
+                      <Input
+                        id="nombre"
+                        value={formData.nombre}
+                        onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
+                        placeholder="Tu nombre"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="telefono">Teléfono</Label>
+                      <Input
+                        id="telefono"
+                        value={formData.telefono}
+                        onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
+                        placeholder="987654321"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="email">Correo electrónico *</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      placeholder="tu@email.com"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="asunto">Asunto *</Label>
+                    <Input
+                      id="asunto"
+                      value={formData.asunto}
+                      onChange={(e) => setFormData({ ...formData, asunto: e.target.value })}
+                      placeholder="¿En qué podemos ayudarte?"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="mensaje">Mensaje *</Label>
+                    <Textarea
+                      id="mensaje"
+                      value={formData.mensaje}
+                      onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}
+                      placeholder="Describe tu consulta o solicitud..."
+                      rows={5}
+                      required
+                    />
+                  </div>
+
+                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
+                    Enviar mensaje
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-8">
+            {/* Contact Details */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Phone className="w-5 h-5 mr-2 text-blue-600" />
+                  Información de Contacto
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Teléfonos</h4>
+                  <div className="space-y-1">
+                    <p className="flex items-center text-gray-600">
+                      <Phone className="w-4 h-4 mr-2" />
+                      982 915 613
+                    </p>
+                    <p className="flex items-center text-gray-600">
+                      <Phone className="w-4 h-4 mr-2" />
+                      996 958 473
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Sitio Web</h4>
+                  <p className="flex items-center text-gray-600">
+                    <Mail className="w-4 h-4 mr-2" />
+                    allergyfree.org.pe
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Redes Sociales</h4>
+                  <Link
+                    href="https://facebook.com/consultorio.allergyfree"
+                    target="_blank"
+                    className="flex items-center text-blue-600 hover:text-blue-700"
+                  >
+                    <Facebook className="w-4 h-4 mr-2" />
+                    Facebook
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Locations */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <MapPin className="w-5 h-5 mr-2 text-blue-600" />
+                  Nuestras Ubicaciones
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">San Borja</h4>
+                  <p className="text-gray-600 mb-2">Clínica SANNA San Borja</p>
+                  <p className="text-gray-600 mb-3">Av. Guardia Civil 337, San Borja</p>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex items-center text-gray-600">
+                      <Clock className="w-4 h-4 mr-2" />
+                      Lun, Mié, Vie: Turnos mañana
+                    </div>
+                    <div className="flex items-center text-gray-600">
+                      <Clock className="w-4 h-4 mr-2" />
+                      Jueves: Turnos tarde
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">San Isidro</h4>
+                  <p className="text-gray-600 mb-2">Consultorio Particular</p>
+                  <p className="text-gray-600 mb-3">Av. Guardia Civil 770, San Isidro</p>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex items-center text-gray-600">
+                      <Clock className="w-4 h-4 mr-2" />
+                      Mar, Jue, Vie: Turnos tarde
+                    </div>
+                    <div className="flex items-center text-gray-600">
+                      <Clock className="w-4 h-4 mr-2" />
+                      Sábado: Turnos mañana y tarde
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Emergency Contact */}
+            <Card className="bg-red-50 border-red-200">
+              <CardHeader>
+                <CardTitle className="text-red-800">Emergencias</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-red-700 text-sm mb-3">
+                  En caso de reacción alérgica severa (anafilaxia), acude inmediatamente a la emergencia más cercana o
+                  llama al 106.
+                </p>
+                <p className="text-red-700 text-sm">
+                  Para urgencias relacionadas con alergias, puedes contactarnos por WhatsApp las 24 horas.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Quick Actions */}
+            <div className="space-y-4">
+              <Link href="/reservar">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
+                  Agendar Cita
+                </Button>
+              </Link>
+              <Link href="https://wa.me/51982915613" target="_blank">
+                <Button variant="outline" className="w-full bg-transparent" size="lg">
+                  WhatsApp Directo
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Map Section */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Encuéntranos</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card>
+              <CardHeader>
+                <CardTitle>San Borja - Clínica SANNA</CardTitle>
+                <CardDescription>Av. Guardia Civil 337, San Borja</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
+                  <p className="text-gray-600">Mapa de San Borja</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>San Isidro - Consultorio</CardTitle>
+                <CardDescription>Av. Guardia Civil 770, San Isidro</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
+                  <p className="text-gray-600">Mapa de San Isidro</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
