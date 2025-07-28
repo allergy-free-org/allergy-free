@@ -32,7 +32,7 @@ export default function FAQPage() {
         },
         {
           q: "¿Necesito prepararme de alguna manera para las pruebas de alergia?",
-          a: "Sí, es importante suspender los antihistamínicos 7 días antes de la prueba, ya que pueden interferir con los resultados. También debes informar sobre todos los medicamentos que tomas. Te daremos instrucciones específicas al agendar tu cita.",
+          a: "Sí, es importante suspender los antihistamínicos al menos 3 días antes de la prueba, ya que pueden interferir con los resultados. También debes informar sobre todos los medicamentos que tomas. Te daremos instrucciones específicas al agendar tu cita.",
         },
         {
           q: "¿A qué edad se pueden hacer las pruebas de alergia?",
@@ -66,7 +66,7 @@ export default function FAQPage() {
       questions: [
         {
           q: "¿Cómo puedo agendar una cita?",
-          a: "Puedes agendar por WhatsApp (982 915 613), llamando directamente, o llenando el formulario en nuestra página web. Si tienes EPS de SANNA, también puedes usar su app móvil.",
+          a: "Puedes agendar por WhatsApp (982 915 613), escribiendo directamente, o llenando el formulario en nuestra página web. Si tienes EPS de SANNA, también puedes usar su app móvil, escribenos y te ayudamos a agendar.",
         },
         {
           q: "¿Ofrecen teleconsultas?",
@@ -76,10 +76,6 @@ export default function FAQPage() {
           q: "¿Qué debo llevar a mi primera consulta?",
           a: "Trae tu DNI, historia clínica previa si la tienes, lista de medicamentos actuales, y cualquier estudio previo relacionado con alergias. También es útil anotar los síntomas y posibles desencadenantes.",
         },
-        {
-          q: "¿Cuánto dura una consulta?",
-          a: "La primera consulta suele durar 45-60 minutos, incluyendo la evaluación clínica y las pruebas si son necesarias. Las consultas de seguimiento duran aproximadamente 30 minutos.",
-        },
       ],
     },
     {
@@ -87,11 +83,11 @@ export default function FAQPage() {
       questions: [
         {
           q: "¿Aceptan seguros médicos?",
-          a: "Trabajamos con EPS de SANNA en nuestra sede de San Borja. Para otros seguros, consulta directamente ya que las coberturas varían. También atendemos pacientes particulares.",
+          a: "Trabajamos con EPS de SANNA en nuestra sede de San Borja. También atendemos pacientes particulares.",
         },
         {
-          q: "¿Tienen planes de pago o promociones?",
-          a: "Sí, manejamos promociones especiales para evaluaciones integrales y tenemos facilidades de pago para tratamientos prolongados como la inmunoterapia. Consulta nuestras ofertas actuales.",
+          q: "¿Tienen promociones?",
+          a: "Sí, manejamos promociones especiales para evaluaciones integrales y tratamientos como la inmunoterapia. Consulta nuestras ofertas actuales.",
         },
       ],
     },
