@@ -90,9 +90,11 @@ export default function EquipoPage() {
                       <p className="text-gray-600">
                         Médico Cirujano - Universidad Nacional Mayor de San Marcos
                         <br />
-                        Especialista en Alergología e Inmunología - Hospital Nacional Dos de Mayo
+                        Especialista en Alergia e Inmunología Clínica - Hospital Nacional Guillermo Almenara Irigoyen
                         <br />
-                        Fellowship en Inmunología Clínica - Hospital Italiano de Buenos Aires
+                        Fellowship en Alergia a Medicamentos en el Hospital De Día del Hospital Universitario La Paz de España
+                        <br />
+                        Fellowship en Inmunodeficiencias Primarias en Hospital Universitario Doce de Octubre
                       </p>
                     </div>
                   </div>
@@ -102,9 +104,9 @@ export default function EquipoPage() {
                     <div>
                       <h4 className="font-semibold">Experiencia</h4>
                       <p className="text-gray-600">
-                        Más de 15 años de experiencia en el diagnóstico y tratamiento de alergias
+                        Más de 15 años de experiencia en el diagnóstico y tratamiento de alergias e Inmunología
                         <br />
-                        Ex-Jefe del Servicio de Alergología del Hospital Nacional Dos de Mayo
+                        Past presidente de la Sociedad Peruana de Inmunodeficiencias Primarias
                         <br />
                         Miembro de la Sociedad Peruana de Alergología e Inmunología
                       </p>
@@ -116,8 +118,7 @@ export default function EquipoPage() {
                     <div>
                       <h4 className="font-semibold">Especialidades</h4>
                       <p className="text-gray-600">
-                        Asma bronquial, Rinitis alérgica, Alergias alimentarias, Urticaria crónica, Inmunodeficiencias,
-                        Inmunoterapia
+                        Asma bronquial, Rinitis alérgica, Alergias alimentarias, Urticaria crónica, Alergias a Medicamentos, Inmunodeficiencias, Inmunoterapia
                       </p>
                     </div>
                   </div>
