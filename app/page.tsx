@@ -3,50 +3,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { MapPin, Phone, Clock, Calendar, Shield, Award, Heart } from "lucide-react"
 import Image from "next/image"
+import Navigation from "@/components/Navigation"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-3">
-              <Image src="/light-icon.png" alt="Allergy Free" width={48} height={48} />
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">Allergy Free</h1>
-                <p className="text-xs text-gray-600">Centro de Alergias</p>
-              </div>
-            </div>
-            <div className="hidden md:flex space-x-6">
-              <Link href="/" className="text-blue-600 font-medium">
-                Inicio
-              </Link>
-              <Link href="/servicios" className="text-gray-700 hover:text-blue-600">
-                Servicios
-              </Link>
-              <Link href="/equipo" className="text-gray-700 hover:text-blue-600">
-                Equipo
-              </Link>
-              <Link href="/faq" className="text-gray-700 hover:text-blue-600">
-                FAQ
-              </Link>
-              <Link href="/noticias" className="text-gray-700 hover:text-blue-600">
-                Noticias
-              </Link>
-              <Link href="/contacto" className="text-gray-700 hover:text-blue-600">
-                Contacto
-              </Link>
-            </div>
-            <Link href="/reservar">
-              <Button className="bg-blue-600 hover:bg-blue-700">
-                <Calendar className="w-4 h-4 mr-2" />
-                Reservar Cita
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="/" />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -252,9 +214,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-white" />
-                </div>
+                <Image src="/light-icon.png" alt="Allergy Free" width={48} height={48} />
                 <span className="text-xl font-bold">Allergy Free</span>
               </div>
               <p className="text-gray-400">Centro especializado en alergología e inmunología</p>

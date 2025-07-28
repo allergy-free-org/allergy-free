@@ -3,49 +3,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowLeft, Shield, Award, GraduationCap, Users } from "lucide-react"
 import Image from "next/image"
+import Navigation from "@/components/Navigation"
 
 export default function EquipoPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">Allergy Free</h1>
-                <p className="text-xs text-gray-600">Centro de Alergias</p>
-              </div>
-            </Link>
-            <div className="hidden md:flex space-x-6">
-              <Link href="/" className="text-gray-700 hover:text-blue-600">
-                Inicio
-              </Link>
-              <Link href="/servicios" className="text-gray-700 hover:text-blue-600">
-                Servicios
-              </Link>
-              <Link href="/equipo" className="text-blue-600 font-medium">
-                Equipo
-              </Link>
-              <Link href="/faq" className="text-gray-700 hover:text-blue-600">
-                FAQ
-              </Link>
-              <Link href="/noticias" className="text-gray-700 hover:text-blue-600">
-                Noticias
-              </Link>
-              <Link href="/contacto" className="text-gray-700 hover:text-blue-600">
-                Contacto
-              </Link>
-            </div>
-            <Link href="/reservar">
-              <Button className="bg-blue-600 hover:bg-blue-700">Reservar Cita</Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="/equipo" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
@@ -125,7 +88,7 @@ export default function EquipoPage() {
                 </div>
 
                 <Button asChild>
-                  <Link href="https://www.cmp.org.pe" target="_blank">
+                  <Link href="https://aplicaciones.cmp.org.pe/conoce_a_tu_medico/datos-colegiado-detallado.php?id=ZXJlcVZRR2FOS3NBc2IrVXVQUnZ5dz09" target="_blank">
                     Ver Perfil en CMP
                   </Link>
                 </Button>
