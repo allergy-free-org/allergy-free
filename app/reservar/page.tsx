@@ -55,7 +55,7 @@ Motivo de consulta: ${formData.motivo}`
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-8">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+          <Link href="/" className="inline-flex items-center text-ocean-600 hover:text-ocean-700 mb-4">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al inicio
           </Link>
@@ -71,7 +71,7 @@ Motivo de consulta: ${formData.motivo}`
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Calendar className="w-6 h-6 mr-2 text-blue-600" />
+                  <Calendar className="w-6 h-6 mr-2 text-ocean-600" />
                   Información de la Cita
                 </CardTitle>
                 <CardDescription>Completa todos los campos para procesar tu solicitud</CardDescription>
@@ -208,7 +208,7 @@ Motivo de consulta: ${formData.motivo}`
                     </div>
                   </div>
 
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
+                  <Button type="submit" className="w-full bg-ocean-600 hover:bg-ocean-700" size="lg">
                     Enviar Solicitud por WhatsApp
                   </Button>
                 </form>
@@ -222,7 +222,7 @@ Motivo de consulta: ${formData.motivo}`
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Phone className="w-5 h-5 mr-2 text-blue-600" />
+                  <Phone className="w-5 h-5 mr-2 text-ocean-600" />
                   Contacto Directo
                 </CardTitle>
               </CardHeader>
@@ -243,7 +243,7 @@ Motivo de consulta: ${formData.motivo}`
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-2 text-blue-600" />
+                  <MapPin className="w-5 h-5 mr-2 text-ocean-600" />
                   Nuestras Sedes
                 </CardTitle>
               </CardHeader>
@@ -265,7 +265,7 @@ Motivo de consulta: ${formData.motivo}`
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2 text-blue-600" />
+                  <Clock className="w-5 h-5 mr-2 text-ocean-600" />
                   Horarios de Atención
                 </CardTitle>
               </CardHeader>
@@ -284,12 +284,12 @@ Motivo de consulta: ${formData.motivo}`
             </Card>
 
             {/* EPS Info */}
-            <Card className="bg-blue-50 border-blue-200">
+            <Card className="bg-ocean-50 border-ocean-200">
               <CardHeader>
-                <CardTitle className="text-blue-800">Pacientes con EPS</CardTitle>
+                <CardTitle className="text-ocean-800">Pacientes con EPS</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-blue-700 text-sm">
+                <p className="text-ocean-700 text-sm">
                   Si tienes EPS de SANNA, puedes agendar directamente desde la app de SANNA.
                 </p>
               </CardContent>

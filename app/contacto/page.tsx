@@ -46,12 +46,12 @@ ${formData.mensaje}`
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+          <Link href="/" className="inline-flex items-center text-ocean-600 hover:text-ocean-700 mb-4">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al inicio
           </Link>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Contacto</h1>
-          <p className="text-xl text-gray-600 max-w-3xl">
+          <p className="text-xl text-gray-700 max-w-3xl">
             Estamos aquí para ayudarte. Contáctanos para resolver tus dudas, agendar una cita o recibir más información
             sobre nuestros servicios.
           </p>
@@ -124,7 +124,7 @@ ${formData.mensaje}`
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
+                  <Button type="submit" className="w-full bg-ocean-600 hover:bg-ocean-700" size="lg">
                     Enviar mensaje
                   </Button>
                 </form>
@@ -138,7 +138,7 @@ ${formData.mensaje}`
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Phone className="w-5 h-5 mr-2 text-blue-600" />
+                  <Phone className="w-5 h-5 mr-2 text-ocean-600" />
                   Información de Contacto
                 </CardTitle>
               </CardHeader>
@@ -170,7 +170,7 @@ ${formData.mensaje}`
                   <Link
                     href="https://facebook.com/consultorio.allergyfree"
                     target="_blank"
-                    className="flex items-center text-blue-600 hover:text-blue-700"
+                    className="flex items-center text-ocean-600 hover:text-ocean-700"
                   >
                     <Facebook className="w-4 h-4 mr-2" />
                     Facebook
@@ -183,7 +183,7 @@ ${formData.mensaje}`
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-2 text-blue-600" />
+                  <MapPin className="w-5 h-5 mr-2 text-ocean-600" />
                   Nuestras Ubicaciones
                 </CardTitle>
               </CardHeader>
@@ -241,7 +241,7 @@ ${formData.mensaje}`
             {/* Quick Actions */}
             <div className="space-y-4">
               <Link href="/reservar">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
+                <Button className="w-full bg-ocean-600 hover:bg-ocean-700" size="lg">
                   Agendar Cita
                 </Button>
               </Link>

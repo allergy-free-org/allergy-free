@@ -102,12 +102,12 @@ export default function FAQPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+          <Link href="/" className="inline-flex items-center text-ocean-600 hover:text-ocean-700 mb-4">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al inicio
           </Link>
           <div className="text-center">
-            <HelpCircle className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+            <HelpCircle className="w-16 h-16 text-ocean-600 mx-auto mb-4" />
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Encuentra respuestas a las preguntas más comunes sobre alergias, diagnóstico, tratamientos y nuestros
@@ -121,7 +121,7 @@ export default function FAQPage() {
           {faqs.map((category, categoryIndex) => (
             <Card key={categoryIndex}>
               <CardHeader>
-                <CardTitle className="text-2xl text-blue-800">{category.category}</CardTitle>
+                <CardTitle className="text-2xl text-ocean-800">{category.category}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -131,7 +131,7 @@ export default function FAQPage() {
                         <span className="font-semibold text-gray-900">{faq.q}</span>
                         <ChevronDown className="w-5 h-5 text-gray-500" />
                       </CollapsibleTrigger>
-                      <CollapsibleContent className="p-4 border-l-4 border-blue-600 bg-blue-50 mt-2 rounded-r-lg">
+                      <CollapsibleContent className="p-4 border-l-4 border-ocean-600 bg-ocean-50 mt-2 rounded-r-lg">
                         <p className="text-gray-700 leading-relaxed">{faq.a}</p>
                       </CollapsibleContent>
                     </Collapsible>
@@ -143,14 +143,14 @@ export default function FAQPage() {
         </div>
 
         {/* Contact CTA */}
-        <div className="mt-16 text-center p-8 bg-blue-50 rounded-2xl">
+        <div className="mt-16 text-center p-8 bg-ocean-50 rounded-2xl">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">¿No encontraste la respuesta que buscabas?</h3>
           <p className="text-gray-600 mb-6">
             Nuestro equipo está listo para resolver todas tus dudas sobre alergias y tratamientos
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contacto">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="bg-ocean-600 hover:bg-ocean-700">
                 Contactar Especialista
               </Button>
             </Link>

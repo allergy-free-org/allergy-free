@@ -13,7 +13,7 @@ export default function EquipoPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+          <Link href="/" className="inline-flex items-center text-ocean-600 hover:text-ocean-700 mb-4">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al inicio
           </Link>
@@ -39,15 +39,15 @@ export default function EquipoPage() {
               </div>
               <div className="md:w-2/3 p-8">
                 <div className="flex items-center mb-4">
-                  <Award className="w-6 h-6 text-blue-600 mr-2" />
-                  <span className="text-blue-600 font-semibold">Directora Médica</span>
+                  <Award className="w-6 h-6 text-ocean-600 mr-2" />
+                  <span className="text-ocean-600 font-semibold">Directora Médica</span>
                 </div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Dra. Mariela Milla Pimentel</h2>
                 <p className="text-xl text-gray-600 mb-6">Especialista en Alergología e Inmunología Clínica</p>
 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start space-x-3">
-                    <GraduationCap className="w-5 h-5 text-blue-600 mt-1" />
+                    <GraduationCap className="w-5 h-5 text-ocean-600 mt-1" />
                     <div>
                       <h4 className="font-semibold">Formación Académica</h4>
                       <p className="text-gray-600">
@@ -63,7 +63,7 @@ export default function EquipoPage() {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <Award className="w-5 h-5 text-blue-600 mt-1" />
+                    <Award className="w-5 h-5 text-ocean-600 mt-1" />
                     <div>
                       <h4 className="font-semibold">Experiencia</h4>
                       <p className="text-gray-600">
@@ -77,7 +77,7 @@ export default function EquipoPage() {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <Shield className="w-5 h-5 text-blue-600 mt-1" />
+                    <Shield className="w-5 h-5 text-ocean-600 mt-1" />
                     <div>
                       <h4 className="font-semibold">Especialidades</h4>
                       <p className="text-gray-600">
@@ -180,26 +180,26 @@ export default function EquipoPage() {
         </div>
 
         {/* Team Stats */}
-        <div className="bg-blue-50 rounded-2xl p-8 mb-12">
+        <div className="bg-ocean-50 rounded-2xl p-8 mb-12">
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Nuestro Compromiso con la Excelencia</h3>
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div>
-              <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <Users className="w-12 h-12 text-ocean-600 mx-auto mb-4" />
               <div className="text-3xl font-bold text-gray-900 mb-2">4</div>
               <div className="text-gray-600">Especialistas</div>
             </div>
             <div>
-              <Award className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <Award className="w-12 h-12 text-ocean-600 mx-auto mb-4" />
               <div className="text-3xl font-bold text-gray-900 mb-2">50+</div>
               <div className="text-gray-600">Años de Experiencia Combinada</div>
             </div>
             <div>
-              <GraduationCap className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <GraduationCap className="w-12 h-12 text-ocean-600 mx-auto mb-4" />
               <div className="text-3xl font-bold text-gray-900 mb-2">100%</div>
               <div className="text-gray-600">Certificados por CMP</div>
             </div>
             <div>
-              <Shield className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <Shield className="w-12 h-12 text-ocean-600 mx-auto mb-4" />
               <div className="text-3xl font-bold text-gray-900 mb-2">5000+</div>
               <div className="text-gray-600">Pacientes Atendidos</div>
             </div>
@@ -212,7 +212,7 @@ export default function EquipoPage() {
           <p className="text-gray-600 mb-6">Recibe atención personalizada de médicos altamente calificados</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/reservar">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="bg-ocean-600 hover:bg-ocean-700">
                 Reservar Cita
               </Button>
             </Link>

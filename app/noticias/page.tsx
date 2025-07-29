@@ -94,7 +94,7 @@ export default function NoticiasPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+          <Link href="/" className="inline-flex items-center text-ocean-600 hover:text-ocean-700 mb-4">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al inicio
           </Link>
@@ -147,7 +147,7 @@ export default function NoticiasPage() {
                 <Button variant="outline" size="sm">
                   Anterior
                 </Button>
-                <Button size="sm" className="bg-blue-600">
+                <Button size="sm" className="bg-ocean-600">
                   1
                 </Button>
                 <Button variant="outline" size="sm">
@@ -169,13 +169,13 @@ export default function NoticiasPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2 text-blue-600" />
+                  <Calendar className="w-5 h-5 mr-2 text-ocean-600" />
                   Próximos Eventos
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 {eventos.map((evento, index) => (
-                  <div key={index} className="border-l-4 border-blue-600 pl-4">
+                  <div key={index} className="border-l-4 border-ocean-600 pl-4">
                     <h4 className="font-semibold text-gray-900 mb-2">{evento.titulo}</h4>
                     <div className="space-y-1 text-sm text-gray-600">
                       <div className="flex items-center">
@@ -225,10 +225,10 @@ export default function NoticiasPage() {
             </Card>
 
             {/* Newsletter */}
-            <Card className="bg-blue-50 border-blue-200">
+            <Card className="bg-ocean-50 border-ocean-200">
               <CardHeader>
-                <CardTitle className="text-blue-800">Suscríbete</CardTitle>
-                <CardDescription className="text-blue-700">
+                <CardTitle className="text-ocean-800">Suscríbete</CardTitle>
+                <CardDescription className="text-ocean-700">
                   Recibe las últimas noticias sobre alergias y salud
                 </CardDescription>
               </CardHeader>
@@ -237,9 +237,9 @@ export default function NoticiasPage() {
                   <input
                     type="email"
                     placeholder="Tu correo electrónico"
-                    className="w-full px-3 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-ocean-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ocean-500"
                   />
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">Suscribirse</Button>
+                  <Button className="w-full bg-ocean-600 hover:bg-ocean-700">Suscribirse</Button>
                 </div>
               </CardContent>
             </Card>
@@ -252,7 +252,7 @@ export default function NoticiasPage() {
               <CardContent>
                 <p className="text-gray-600 mb-4">Nuestros especialistas están listos para resolver tus consultas</p>
                 <Link href="/reservar">
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">Agendar Consulta</Button>
+                  <Button className="w-full bg-ocean-600 hover:bg-ocean-700">Agendar Consulta</Button>
                 </Link>
               </CardContent>
             </Card>

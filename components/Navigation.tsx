@@ -18,7 +18,7 @@ export default function Navigation({ currentPage }: NavigationProps) {
   ]
 
   return (
-    <nav className="bg-white shadow-sm border-b">
+    <nav className="bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-3">
@@ -35,8 +35,8 @@ export default function Navigation({ currentPage }: NavigationProps) {
                 href={item.href}
                 className={
                   currentPage === item.href
-                    ? "text-blue-600 font-medium"
-                    : "text-gray-700 hover:text-blue-600"
+                    ? "text-ocean-600 font-medium"
+                    : "text-gray-700 hover:text-ocean-600"
                 }
               >
                 {item.label}
@@ -44,7 +44,7 @@ export default function Navigation({ currentPage }: NavigationProps) {
             ))}
           </div>
           <Link href="/reservar">
-            <Button className="bg-blue-600 hover:bg-blue-700">
+            <Button className="bg-ocean-600 hover:bg-ocean-700">
               <Calendar className="w-4 h-4 mr-2" />
               Reservar Cita
             </Button>
