@@ -10,7 +10,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { ArrowLeft, Shield, MapPin, Phone, Clock, Mail, Facebook } from "lucide-react"
+import { ArrowLeft, Shield, MapPin, Phone, Clock, Mail } from "lucide-react"
+import { FacebookIcon } from "@/components/icons/FacebookIcon"
 import Navigation from "@/components/Navigation"
 
 export default function ContactoPage() {
@@ -170,7 +171,7 @@ ${formData.mensaje}`
                     target="_blank"
                     className="flex items-center text-ocean-600 hover:text-ocean-700"
                   >
-                    <Facebook className="w-4 h-4 mr-2" />
+                    <FacebookIcon className="w-4 h-4 mr-2" />
                     Facebook
                   </Link>
                 </div>

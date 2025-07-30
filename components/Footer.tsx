@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { FacebookIcon } from "@/components/icons/FacebookIcon"
 
 export default function Footer() {
   return (
@@ -43,8 +44,9 @@ export default function Footer() {
 
           <div>
             <h3 className="font-semibold mb-4">Síguenos</h3>
-            <Link href="https://facebook.com/consultorio.allergyfree" className="text-ocean-200 hover:text-white">
-              Facebook
+            <Link href="https://facebook.com/consultorio.allergyfree" className="flex items-center">
+              <FacebookIcon className="w-4 h-4 mr-2" color="#0866FF" />
+              <p className="text-ocean-200 hover:text-white">Facebook</p>
             </Link>
           </div>
         </div>
