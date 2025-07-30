@@ -1,13 +1,14 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "lucide-react"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 
-interface NavigationProps {
-  currentPage?: string
-}
-
-export default function Navigation({ currentPage }: NavigationProps) {
+export default function Navigation() {
+  const pathname = usePathname()
+  
   const navItems = [
     { href: "/", label: "Inicio" },
     { href: "/servicios", label: "Servicios" },
@@ -34,7 +35,7 @@ export default function Navigation({ currentPage }: NavigationProps) {
                 key={item.href}
                 href={item.href}
                 className={
-                  currentPage === item.href
+                  pathname === item.href
                     ? "text-ocean-600 font-medium"
                     : "text-gray-700 hover:text-ocean-600"
                 }
