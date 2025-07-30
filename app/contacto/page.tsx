@@ -4,15 +4,13 @@ import type React from "react"
 
 import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { ArrowLeft, Shield, MapPin, Phone, Clock, Mail } from "lucide-react"
+import { ArrowLeft, MapPin, Phone, Clock } from "lucide-react"
 import { FacebookIcon } from "@/components/icons/FacebookIcon"
-import Navigation from "@/components/Navigation"
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
@@ -42,10 +40,10 @@ ${formData.mensaje}`
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
-          <Link href="/" className="inline-flex items-center text-ocean-600 hover:text-ocean-700 mb-4">
+          <Link href="/" className="inline-flex items-center text-ocean-600 [&:hover]:text-ocean-700 mb-4">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al inicio
           </Link>
@@ -56,9 +54,9 @@ ${formData.mensaje}`
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Form */}
-          <div>
+          <div className="lg:col-span-2">
             <Card>
               <CardHeader>
                 <CardTitle>Envíanos un mensaje</CardTitle>
@@ -68,7 +66,7 @@ ${formData.mensaje}`
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="nombre">Nombre completo *</Label>
+                      <Label htmlFor="nombre" className="mb-2 block">Nombre completo *</Label>
                       <Input
                         id="nombre"
                         value={formData.nombre}
@@ -78,7 +76,7 @@ ${formData.mensaje}`
                       />
                     </div>
                     <div>
-                      <Label htmlFor="telefono">Teléfono</Label>
+                      <Label htmlFor="telefono" className="mb-2 block">Teléfono</Label>
                       <Input
                         id="telefono"
                         value={formData.telefono}
@@ -89,7 +87,7 @@ ${formData.mensaje}`
                   </div>
 
                   <div>
-                    <Label htmlFor="email">Correo electrónico *</Label>
+                    <Label htmlFor="email" className="mb-2 block">Correo electrónico *</Label>
                     <Input
                       id="email"
                       type="email"
@@ -101,7 +99,7 @@ ${formData.mensaje}`
                   </div>
 
                   <div>
-                    <Label htmlFor="asunto">Asunto *</Label>
+                    <Label htmlFor="asunto" className="mb-2 block">Asunto *</Label>
                     <Input
                       id="asunto"
                       value={formData.asunto}
@@ -112,7 +110,7 @@ ${formData.mensaje}`
                   </div>
 
                   <div>
-                    <Label htmlFor="mensaje">Mensaje *</Label>
+                    <Label htmlFor="mensaje" className="mb-2 block">Mensaje *</Label>
                     <Textarea
                       id="mensaje"
                       value={formData.mensaje}
@@ -123,9 +121,24 @@ ${formData.mensaje}`
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-ocean-600 hover:bg-ocean-700" size="lg">
+                  <Button type="submit" className="w-full bg-ocean-600 [&:hover]:bg-ocean-700" size="lg">
                     Enviar mensaje
                   </Button>
+                  
+                  <div className="relative">
+                    <div className="absolute inset-0 flex items-center">
+                      <span className="w-full border-t border-gray-300" />
+                    </div>
+                    <div className="relative flex justify-center text-sm">
+                      <span className="bg-white px-2 text-gray-500">o</span>
+                    </div>
+                  </div>
+                  
+                  <Link href="/reservar" className="block">
+                    <Button variant="outline" className="w-full border-ocean-600 text-ocean-600 [&:hover]:bg-ocean-600 [&:hover]:text-white" size="lg">
+                      Agendar Consulta
+                    </Button>
+                  </Link>
                 </form>
               </CardContent>
             </Card>
@@ -157,19 +170,11 @@ ${formData.mensaje}`
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Sitio Web</h4>
-                  <p className="flex items-center text-gray-600">
-                    <Mail className="w-4 h-4 mr-2" />
-                    allergyfree.org.pe
-                  </p>
-                </div>
-
-                <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Redes Sociales</h4>
                   <Link
                     href="https://facebook.com/consultorio.allergyfree"
                     target="_blank"
-                    className="flex items-center text-ocean-600 hover:text-ocean-700"
+                    className="flex items-center text-ocean-600 [&:hover]:text-ocean-700"
                   >
                     <FacebookIcon className="w-4 h-4 mr-2" />
                     Facebook
@@ -221,35 +226,7 @@ ${formData.mensaje}`
               </CardContent>
             </Card>
 
-            {/* Emergency Contact */}
-            <Card className="bg-red-50 border-red-200">
-              <CardHeader>
-                <CardTitle className="text-red-800">Emergencias</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-red-700 text-sm mb-3">
-                  En caso de reacción alérgica severa (anafilaxia), acude inmediatamente a la emergencia más cercana o
-                  llama al 106.
-                </p>
-                <p className="text-red-700 text-sm">
-                  Para urgencias relacionadas con alergias, puedes contactarnos por WhatsApp las 24 horas.
-                </p>
-              </CardContent>
-            </Card>
 
-            {/* Quick Actions */}
-            <div className="space-y-4">
-              <Link href="/reservar">
-                <Button className="w-full bg-ocean-600 hover:bg-ocean-700" size="lg">
-                  Agendar Cita
-                </Button>
-              </Link>
-              <Link href="https://wa.me/51982915613" target="_blank">
-                <Button variant="outline" className="w-full bg-transparent" size="lg">
-                  WhatsApp Directo
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
 

@@ -50,10 +50,10 @@ Motivo de consulta: ${formData.motivo}`
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-8">
-          <Link href="/" className="inline-flex items-center text-ocean-600 hover:text-ocean-700 mb-4">
+          <Link href="/" className="inline-flex items-center text-ocean-600 [&:hover]:text-ocean-700 mb-4">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al inicio
           </Link>
@@ -82,7 +82,7 @@ Motivo de consulta: ${formData.motivo}`
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="nombre">Nombre Completo *</Label>
+                        <Label htmlFor="nombre" className="mb-2 block">Nombre Completo *</Label>
                         <Input
                           id="nombre"
                           value={formData.nombre}
@@ -92,7 +92,7 @@ Motivo de consulta: ${formData.motivo}`
                         />
                       </div>
                       <div>
-                        <Label htmlFor="dni">DNI *</Label>
+                        <Label htmlFor="dni" className="mb-2 block">DNI *</Label>
                         <Input
                           id="dni"
                           value={formData.dni}
@@ -105,7 +105,7 @@ Motivo de consulta: ${formData.motivo}`
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="edad">Edad *</Label>
+                        <Label htmlFor="edad" className="mb-2 block">Edad *</Label>
                         <Input
                           id="edad"
                           type="number"
@@ -116,7 +116,7 @@ Motivo de consulta: ${formData.motivo}`
                         />
                       </div>
                       <div>
-                        <Label htmlFor="telefono">Teléfono *</Label>
+                        <Label htmlFor="telefono" className="mb-2 block">Teléfono *</Label>
                         <Input
                           id="telefono"
                           value={formData.telefono}
@@ -133,7 +133,7 @@ Motivo de consulta: ${formData.motivo}`
                     <h3 className="text-lg font-semibold text-gray-900">Preferencias de Cita</h3>
 
                     <div>
-                      <Label>Sede de Preferencia *</Label>
+                      <Label className="mb-2 block">Sede de Preferencia *</Label>
                       <Select
                         value={formData.sede}
                         onValueChange={(value) => setFormData({ ...formData, sede: value })}
@@ -149,7 +149,7 @@ Motivo de consulta: ${formData.motivo}`
                     </div>
 
                     <div>
-                      <Label>Modalidad *</Label>
+                      <Label className="mb-2 block">Modalidad *</Label>
                       <RadioGroup
                         value={formData.modalidad}
                         onValueChange={(value) => setFormData({ ...formData, modalidad: value })}
@@ -168,7 +168,7 @@ Motivo de consulta: ${formData.motivo}`
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="fecha">Fecha Preferida *</Label>
+                        <Label htmlFor="fecha" className="mb-2 block">Fecha Preferida *</Label>
                         <Input
                           id="fecha"
                           type="date"
@@ -178,7 +178,7 @@ Motivo de consulta: ${formData.motivo}`
                         />
                       </div>
                       <div>
-                        <Label htmlFor="hora">Hora Preferida</Label>
+                        <Label htmlFor="hora" className="mb-2 block">Hora Preferida</Label>
                         <Select
                           value={formData.hora}
                           onValueChange={(value) => setFormData({ ...formData, hora: value })}
@@ -195,7 +195,7 @@ Motivo de consulta: ${formData.motivo}`
                     </div>
 
                     <div>
-                      <Label htmlFor="motivo">Motivo de Consulta</Label>
+                      <Label htmlFor="motivo" className="mb-2 block">Motivo de Consulta</Label>
                       <Textarea
                         id="motivo"
                         value={formData.motivo}
@@ -206,7 +206,7 @@ Motivo de consulta: ${formData.motivo}`
                     </div>
                   </div>
 
-                  <Button type="submit" className="w-full bg-ocean-600 hover:bg-ocean-700" size="lg">
+                  <Button type="submit" className="w-full bg-ocean-600 [&:hover]:bg-ocean-700" size="lg">
                     Enviar Solicitud por WhatsApp
                   </Button>
                 </form>
@@ -230,10 +230,6 @@ Motivo de consulta: ${formData.motivo}`
                   <p className="text-gray-600">📞 982 915 613</p>
                   <p className="text-gray-600">📞 996 958 473</p>
                 </div>
-                <div>
-                  <p className="font-semibold">WhatsApp</p>
-                  <p className="text-gray-600">Respuesta inmediata</p>
-                </div>
               </CardContent>
             </Card>
 
@@ -242,7 +238,7 @@ Motivo de consulta: ${formData.motivo}`
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <MapPin className="w-5 h-5 mr-2 text-ocean-600" />
-                  Nuestras Sedes
+                  Nuestras Ubicaciones
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
