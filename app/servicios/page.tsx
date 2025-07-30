@@ -13,7 +13,7 @@ export default function ServiciosPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-8">
-          <Link href="/" className="inline-flex items-center text-ocean-600 hover:text-ocean-700 mb-4">
+          <Link href="/" className="inline-flex items-center text-ocean-600 [&:hover]:text-ocean-700 mb-4">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al inicio
           </Link>
@@ -99,7 +99,7 @@ export default function ServiciosPage() {
             <CardContent>
               <div className="space-y-6">
                 <Collapsible>
-                  <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                  <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg [&:hover]:bg-gray-100">
                     <span className="font-semibold">Prick Test de Alérgenos Ambientales</span>
                     <ChevronDown className="w-5 h-5" />
                   </CollapsibleTrigger>
@@ -112,7 +112,7 @@ export default function ServiciosPage() {
                 </Collapsible>
 
                 <Collapsible>
-                  <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                  <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg [&:hover]:bg-gray-100">
                     <span className="font-semibold">Prick Test de Alérgenos Alimentarios</span>
                     <ChevronDown className="w-5 h-5" />
                   </CollapsibleTrigger>
@@ -129,7 +129,7 @@ export default function ServiciosPage() {
                 </Collapsible>
 
                 <Collapsible>
-                  <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100">
+                  <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg [&:hover]:bg-gray-100">
                     <span className="font-semibold">Pruebas Especializadas</span>
                     <ChevronDown className="w-5 h-5" />
                   </CollapsibleTrigger>
@@ -195,7 +195,7 @@ export default function ServiciosPage() {
                   *Promoción válida para nuevos pacientes. Consulta condiciones.
                 </p>
                 <Link href="/reservar">
-                  <Button className="bg-ocean-600 hover:bg-ocean-700">Consultar Precio</Button>
+                  <Button className="bg-ocean-600 [&:hover]:bg-ocean-700">Consultar Precio</Button>
                 </Link>
               </div>
             </CardContent>
@@ -208,7 +208,7 @@ export default function ServiciosPage() {
           <p className="text-gray-600 mb-6">Agenda tu cita y recibe atención personalizada de nuestros especialistas</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/reservar">
-              <Button size="lg" className="bg-ocean-600 hover:bg-ocean-700">
+              <Button size="lg" className="bg-ocean-600 [&:hover]:bg-ocean-700">
                 Reservar Cita
               </Button>
             </Link>

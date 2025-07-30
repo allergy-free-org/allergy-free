@@ -92,7 +92,7 @@ export default function NoticiasPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
-          <Link href="/" className="inline-flex items-center text-ocean-600 hover:text-ocean-700 mb-4">
+          <Link href="/" className="inline-flex items-center text-ocean-600 [&:hover]:text-ocean-700 mb-4">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al inicio
           </Link>
@@ -108,7 +108,7 @@ export default function NoticiasPage() {
           <div className="lg:col-span-2">
             <div className="space-y-8">
               {noticias.map((noticia) => (
-                <Card key={noticia.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <Card key={noticia.id} className="overflow-hidden [&:hover]:shadow-lg transition-shadow">
                   <div className="md:flex">
                     <div className="md:w-1/3">
                       <Image
@@ -237,7 +237,7 @@ export default function NoticiasPage() {
                     placeholder="Tu correo electrónico"
                     className="w-full px-3 py-2 border border-ocean-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ocean-500"
                   />
-                  <Button className="w-full bg-ocean-600 hover:bg-ocean-700">Suscribirse</Button>
+                  <Button className="w-full bg-ocean-600 [&:hover]:bg-ocean-700">Suscribirse</Button>
                 </div>
               </CardContent>
             </Card>
@@ -250,7 +250,7 @@ export default function NoticiasPage() {
               <CardContent>
                 <p className="text-gray-600 mb-4">Nuestros especialistas están listos para resolver tus consultas</p>
                 <Link href="/reservar">
-                  <Button className="w-full bg-ocean-600 hover:bg-ocean-700">Agendar Consulta</Button>
+                  <Button className="w-full bg-ocean-600 [&:hover]:bg-ocean-700">Agendar Consulta</Button>
                 </Link>
               </CardContent>
             </Card>

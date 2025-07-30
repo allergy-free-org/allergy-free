@@ -100,7 +100,7 @@ export default function FAQPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
-          <Link href="/" className="inline-flex items-center text-ocean-600 hover:text-ocean-700 mb-4">
+          <Link href="/" className="inline-flex items-center text-ocean-600 [&:hover]:text-ocean-700 mb-4">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al inicio
           </Link>
@@ -125,7 +125,7 @@ export default function FAQPage() {
                 <div className="space-y-4">
                   {category.questions.map((faq, faqIndex) => (
                     <Collapsible key={faqIndex}>
-                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 text-left bg-gray-50 rounded-lg [&:hover]:bg-gray-100 transition-colors">
                         <span className="font-semibold text-gray-900">{faq.q}</span>
                         <ChevronDown className="w-5 h-5 text-gray-500" />
                       </CollapsibleTrigger>
@@ -148,7 +148,7 @@ export default function FAQPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contacto">
-              <Button size="lg" className="bg-ocean-600 hover:bg-ocean-700">
+              <Button size="lg" className="bg-ocean-600 [&:hover]:bg-ocean-700">
                 Contactar Especialista
               </Button>
             </Link>

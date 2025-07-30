@@ -37,7 +37,7 @@ export default function Navigation() {
                 className={
                   pathname === item.href
                     ? "text-ocean-600 font-medium"
-                    : "text-gray-700 hover:text-ocean-600"
+                    : "text-gray-700 [&:hover]:text-ocean-600"
                 }
               >
                 {item.label}
@@ -45,7 +45,7 @@ export default function Navigation() {
             ))}
           </div>
           <Link href="/reservar">
-            <Button className="bg-ocean-600 hover:bg-ocean-700">
+            <Button className="bg-ocean-600 [&:hover]:bg-ocean-700">
               <Calendar className="w-4 h-4 mr-2" />
               Reservar Cita
             </Button>

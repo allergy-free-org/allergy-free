@@ -18,16 +18,16 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Enlaces</h3>
             <div className="space-y-2">
-              <Link href="/servicios" className="block text-ocean-200 hover:text-white">
+              <Link href="/servicios" className="block text-ocean-200 [&:hover]:text-white">
                 Servicios
               </Link>
-              <Link href="/equipo" className="block text-ocean-200 hover:text-white">
+              <Link href="/equipo" className="block text-ocean-200 [&:hover]:text-white">
                 Equipo
               </Link>
-              <Link href="/faq" className="block text-ocean-200 hover:text-white">
+              <Link href="/faq" className="block text-ocean-200 [&:hover]:text-white">
                 FAQ
               </Link>
-              <Link href="/noticias" className="block text-ocean-200 hover:text-white">
+              <Link href="/noticias" className="block text-ocean-200 [&:hover]:text-white">
                 Noticias
               </Link>
             </div>
@@ -45,8 +45,8 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Síguenos</h3>
             <Link href="https://facebook.com/consultorio.allergyfree" className="flex items-center">
-              <FacebookIcon className="w-4 h-4 mr-2" color="#0866FF" />
-              <p className="text-ocean-200 hover:text-white">Facebook</p>
+              <FacebookIcon className="w-4 h-4 mr-2" color="white" />
+              <p className="text-ocean-200 [&:hover]:text-white">Facebook</p>
             </Link>
           </div>
         </div>

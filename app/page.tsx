@@ -23,13 +23,13 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/reservar">
-                  <Button size="lg" className="bg-ocean-600 hover:bg-ocean-700 w-full sm:w-auto">
+                  <Button size="lg" className="bg-ocean-600 [&:hover]:bg-ocean-700 w-full sm:w-auto">
                     <Calendar className="w-5 h-5 mr-2" />
                     Agendar Cita
                   </Button>
                 </Link>
                 <Link href="/servicios">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent border-ocean-200 text-ocean-700 hover:bg-ocean-50">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent border-ocean-200 text-ocean-700 [&:hover]:bg-ocean-50">
                     Conocer Servicios
                   </Button>
                 </Link>
@@ -83,7 +83,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="[&:hover]:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-seafoam-100 rounded-lg flex items-center justify-center mb-4">
                   <Heart className="w-6 h-6 text-seafoam-600" />
@@ -95,7 +95,7 @@ export default function HomePage() {
               </CardHeader>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="[&:hover]:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-seafoam-100 rounded-lg flex items-center justify-center mb-4">
                   <Shield className="w-6 h-6 text-seafoam-600" />
@@ -107,7 +107,7 @@ export default function HomePage() {
               </CardHeader>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="[&:hover]:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-seafoam-100 rounded-lg flex items-center justify-center mb-4">
                   <Award className="w-6 h-6 text-seafoam-600" />
@@ -197,7 +197,7 @@ export default function HomePage() {
               <span>982 915 613 • 996 958 473</span>
             </div>
             <Link href="/reservar">
-              <Button size="lg" className="bg-white text-ocean-600 hover:bg-gray-50">
+              <Button size="lg" className="bg-white text-ocean-600 [&:hover]:bg-gray-50">
                 Reservar Ahora
               </Button>
             </Link>

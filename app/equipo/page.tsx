@@ -11,7 +11,7 @@ export default function EquipoPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
-          <Link href="/" className="inline-flex items-center text-ocean-600 hover:text-ocean-700 mb-4">
+          <Link href="/" className="inline-flex items-center text-ocean-600 [&:hover]:text-ocean-700 mb-4">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al inicio
           </Link>
@@ -210,7 +210,7 @@ export default function EquipoPage() {
           <p className="text-gray-600 mb-6">Recibe atención personalizada de médicos altamente calificados</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/reservar">
-              <Button size="lg" className="bg-ocean-600 hover:bg-ocean-700">
+              <Button size="lg" className="bg-ocean-600 [&:hover]:bg-ocean-700">
                 Reservar Cita
               </Button>
             </Link>
