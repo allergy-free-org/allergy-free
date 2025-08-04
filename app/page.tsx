@@ -37,7 +37,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/logo.jpg?height=500&width=600"
+                src="/consulta-pediatria.png?height=500&width=600"
                 alt="Consulta médica especializada en alergias"
                 width={600}
                 height={500}
@@ -131,7 +131,7 @@ export default function HomePage() {
       </section>
 
       {/* Locations */}
-      <section className="py-20 bg-gray-50 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Nuestras Ubicaciones</h2>
@@ -139,45 +139,93 @@ export default function HomePage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-2 text-ocean-600" />
-                  San Borja - Clínica SANNA
-                </CardTitle>
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg bg-white">
+              <CardHeader className="pb-0">
+                <div className="flex items-center justify-between">
+                  <CardTitle className="flex items-center text-xl">
+                    <div className="w-10 h-10 bg-ocean-100 rounded-full flex items-center justify-center mr-3 group-hover:bg-ocean-200 transition-colors">
+                      <MapPin className="w-5 h-5 text-ocean-600" />
+                    </div>
+                    San Borja - Clínica SANNA
+                  </CardTitle>
+                </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-700 mb-4">Av. Guardia Civil 337, San Borja</p>
-                <div className="space-y-2">
-                  <div className="flex items-center text-sm">
-                    <Clock className="w-4 h-4 mr-2 text-gray-400" />
-                    <span>Lunes, Miércoles, Viernes: Turnos mañana</span>
+              <CardContent className="pt-0">
+                <div className="mb-6">
+                  <a 
+                    href="https://maps.app.goo.gl/9UApsfzb9tkgjn5bA" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-ocean-600 hover:text-ocean-700 font-medium group/link"
+                  >
+                    <span className="underline decoration-2 underline-offset-4 group-hover/link:decoration-ocean-400">
+                      Av. Guardia Civil 337, San Borja
+                    </span>
+                    <svg className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <Clock className="w-4 h-4 mr-3 mt-0.5 text-ocean-500 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Lunes, Miércoles, Viernes</p>
+                      <p className="text-sm text-gray-600">Turnos mañana</p>
+                    </div>
                   </div>
-                  <div className="flex items-center text-sm">
-                    <Clock className="w-4 h-4 mr-2 text-gray-400" />
-                    <span>Jueves: Turnos tarde</span>
+                  <div className="flex items-start">
+                    <Clock className="w-4 h-4 mr-3 mt-0.5 text-ocean-500 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Jueves</p>
+                      <p className="text-sm text-gray-600">Turnos tarde</p>
+                    </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-2 text-ocean-600" />
-                  San Isidro - Consultorio
-                </CardTitle>
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg bg-white">
+              <CardHeader className="pb-0">
+                <div className="flex items-center justify-between">
+                  <CardTitle className="flex items-center text-xl">
+                    <div className="w-10 h-10 bg-seafoam-100 rounded-full flex items-center justify-center mr-3 group-hover:bg-seafoam-200 transition-colors">
+                      <MapPin className="w-5 h-5 text-seafoam-600" />
+                    </div>
+                    San Isidro - Consultorio
+                  </CardTitle>
+                </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-700 mb-4">Av. Guardia Civil 770, San Isidro</p>
-                <div className="space-y-2">
-                  <div className="flex items-center text-sm">
-                    <Clock className="w-4 h-4 mr-2 text-gray-400" />
-                    <span>Martes, Jueves, Viernes: Turnos tarde</span>
+              <CardContent className="pt-0">
+                <div className="mb-6">
+                  <a 
+                    href="https://maps.app.goo.gl/gjZoss1shHhJMgTi8" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-seafoam-600 hover:text-seafoam-700 font-medium group/link"
+                  >
+                    <span className="underline decoration-2 underline-offset-4 group-hover/link:decoration-seafoam-400">
+                      Av. Guardia Civil 770, San Isidro
+                    </span>
+                    <svg className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <Clock className="w-4 h-4 mr-3 mt-0.5 text-seafoam-500 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Martes, Jueves, Viernes</p>
+                      <p className="text-sm text-gray-600">Turnos tarde</p>
+                    </div>
                   </div>
-                  <div className="flex items-center text-sm">
-                    <Clock className="w-4 h-4 mr-2 text-gray-400" />
-                    <span>Sábado: Turnos mañana y tarde</span>
+                  <div className="flex items-start">
+                    <Clock className="w-4 h-4 mr-3 mt-0.5 text-seafoam-500 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Sábado</p>
+                      <p className="text-sm text-gray-600">Turnos mañana y tarde</p>
+                    </div>
                   </div>
                 </div>
               </CardContent>

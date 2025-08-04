@@ -4,9 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Shield, Calendar, Clock, ArrowRight } from "lucide-react"
 import Image from "next/image"
-import Navigation from "@/components/Navigation"
 
-export default function NoticiasPage() {
+function NoticiasPage() {
   const noticias = [
     {
       id: 1,

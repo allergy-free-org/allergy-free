@@ -14,7 +14,7 @@ export default function Navigation() {
     { href: "/servicios", label: "Servicios" },
     { href: "/equipo", label: "Equipo" },
     { href: "/faq", label: "FAQ" },
-    { href: "/noticias", label: "Noticias" },
+    // { href: "/noticias", label: "Noticias" },
     { href: "/contacto", label: "Contacto" },
   ]
 

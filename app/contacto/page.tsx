@@ -183,42 +183,86 @@ ${formData.mensaje}`
             </Card>
 
             {/* Locations */}
-            <Card>
+            <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-0 shadow-md bg-white">
               <CardHeader>
-                <CardTitle className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-2 text-ocean-600" />
+                <CardTitle className="flex items-center text-lg">
+                  <div className="w-8 h-8 bg-ocean-100 rounded-full flex items-center justify-center mr-3 group-hover:bg-ocean-200 transition-colors">
+                    <MapPin className="w-4 h-4 text-ocean-600" />
+                  </div>
                   Nuestras Ubicaciones
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">San Borja</h4>
-                  <p className="text-gray-600 mb-2">Clínica SANNA San Borja</p>
-                  <p className="text-gray-600 mb-3">Av. Guardia Civil 337, San Borja</p>
-                  <div className="space-y-1 text-sm">
-                    <div className="flex items-center text-gray-600">
-                      <Clock className="w-4 h-4 mr-2" />
-                      Lun, Mié, Vie: Turnos mañana
+              <CardContent className="pt-0 space-y-6">
+                <div className="space-y-4">
+                  <div className="p-4 bg-gradient-to-r from-ocean-50 to-seafoam-50 rounded-lg border border-ocean-100">
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="font-semibold text-gray-900 text-base">San Borja</h4>
                     </div>
-                    <div className="flex items-center text-gray-600">
-                      <Clock className="w-4 h-4 mr-2" />
-                      Jueves: Turnos tarde
+                    <p className="text-gray-600 text-sm mb-2">Clínica SANNA San Borja</p>
+                    <a 
+                      href="https://maps.app.goo.gl/9UApsfzb9tkgjn5bA" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-ocean-600 hover:text-ocean-700 font-medium group/link text-sm"
+                    >
+                      <span className="underline decoration-2 underline-offset-2 group-hover/link:decoration-ocean-400">
+                        Av. Guardia Civil 337, San Borja
+                      </span>
+                      <svg className="w-3 h-3 ml-1 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                    <div className="mt-3 space-y-2">
+                      <div className="flex items-start">
+                        <Clock className="w-3 h-3 mr-2 mt-0.5 text-ocean-500 flex-shrink-0" />
+                        <div>
+                          <p className="text-xs font-medium text-gray-900">Lun, Mié, Vie</p>
+                          <p className="text-xs text-gray-600">Turnos mañana</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <Clock className="w-3 h-3 mr-2 mt-0.5 text-ocean-500 flex-shrink-0" />
+                        <div>
+                          <p className="text-xs font-medium text-gray-900">Jueves</p>
+                          <p className="text-xs text-gray-600">Turnos tarde</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">San Isidro</h4>
-                  <p className="text-gray-600 mb-2">Consultorio Particular</p>
-                  <p className="text-gray-600 mb-3">Av. Guardia Civil 770, San Isidro</p>
-                  <div className="space-y-1 text-sm">
-                    <div className="flex items-center text-gray-600">
-                      <Clock className="w-4 h-4 mr-2" />
-                      Mar, Jue, Vie: Turnos tarde
+                  <div className="p-4 bg-gradient-to-r from-seafoam-50 to-ocean-50 rounded-lg border border-seafoam-100">
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="font-semibold text-gray-900 text-base">San Isidro</h4>
                     </div>
-                    <div className="flex items-center text-gray-600">
-                      <Clock className="w-4 h-4 mr-2" />
-                      Sábado: Turnos mañana y tarde
+                    <p className="text-gray-600 text-sm mb-2">Consultorio Particular</p>
+                    <a 
+                      href="https://maps.app.goo.gl/gjZoss1shHhJMgTi8" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-seafoam-600 hover:text-seafoam-700 font-medium group/link text-sm"
+                    >
+                      <span className="underline decoration-2 underline-offset-2 group-hover/link:decoration-seafoam-400">
+                        Av. Guardia Civil 770, San Isidro
+                      </span>
+                      <svg className="w-3 h-3 ml-1 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                    <div className="mt-3 space-y-2">
+                      <div className="flex items-start">
+                        <Clock className="w-3 h-3 mr-2 mt-0.5 text-seafoam-500 flex-shrink-0" />
+                        <div>
+                          <p className="text-xs font-medium text-gray-900">Mar, Jue, Vie</p>
+                          <p className="text-xs text-gray-600">Turnos tarde</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <Clock className="w-3 h-3 mr-2 mt-0.5 text-seafoam-500 flex-shrink-0" />
+                        <div>
+                          <p className="text-xs font-medium text-gray-900">Sábado</p>
+                          <p className="text-xs text-gray-600">Turnos mañana y tarde</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
