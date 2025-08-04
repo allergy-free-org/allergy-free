@@ -1,13 +1,14 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeft, Shield, Award, GraduationCap, Users } from "lucide-react"
+import { ArrowLeft, Shield, Award, GraduationCap, Users, MapPin, Phone, Mail } from "lucide-react"
 import Image from "next/image"
 import Navigation from "@/components/Navigation"
+import ProfileCard from "@/components/ProfileCard"
 
 export default function EquipoPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-12">
@@ -24,75 +25,29 @@ export default function EquipoPage() {
 
         {/* Main Doctor */}
         <div className="mb-16">
-          <Card className="overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-1/3">
-                <Image
-                  src="/placeholder.svg?height=400&width=300"
-                  alt="Dra. Mariela Milla Pimentel"
-                  width={300}
-                  height={400}
-                  className="w-full h-64 md:h-full object-cover"
-                />
-              </div>
-              <div className="md:w-2/3 p-8">
-                <div className="flex items-center mb-4">
-                  <Award className="w-6 h-6 text-ocean-600 mr-2" />
-                  <span className="text-ocean-600 font-semibold">Directora Médica</span>
-                </div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">Dra. Mariela Milla Pimentel</h2>
-                <p className="text-xl text-gray-600 mb-6">Especialista en Alergología e Inmunología Clínica</p>
-
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-start space-x-3">
-                    <GraduationCap className="w-5 h-5 text-ocean-600 mt-1" />
-                    <div>
-                      <h4 className="font-semibold">Formación Académica</h4>
-                      <p className="text-gray-600">
-                        Médico Cirujano - Universidad Nacional Mayor de San Marcos
-                        <br />
-                        Especialista en Alergia e Inmunología Clínica - Hospital Nacional Guillermo Almenara Irigoyen
-                        <br />
-                        Fellowship en Alergia a Medicamentos en el Hospital De Día del Hospital Universitario La Paz de España
-                        <br />
-                        Fellowship en Inmunodeficiencias Primarias en Hospital Universitario Doce de Octubre
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
-                    <Award className="w-5 h-5 text-ocean-600 mt-1" />
-                    <div>
-                      <h4 className="font-semibold">Experiencia</h4>
-                      <p className="text-gray-600">
-                        Más de 15 años de experiencia en el diagnóstico y tratamiento de alergias e Inmunología
-                        <br />
-                        Past presidente de la Sociedad Peruana de Inmunodeficiencias Primarias
-                        <br />
-                        Miembro de la Sociedad Peruana de Alergología e Inmunología
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
-                    <Shield className="w-5 h-5 text-ocean-600 mt-1" />
-                    <div>
-                      <h4 className="font-semibold">Especialidades</h4>
-                      <p className="text-gray-600">
-                        Asma bronquial, Rinitis alérgica, Alergias alimentarias, Urticaria crónica, Alergias a Medicamentos, Inmunodeficiencias, Inmunoterapia
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <Button asChild>
-                  <Link href="https://aplicaciones.cmp.org.pe/conoce_a_tu_medico/datos-colegiado-detallado.php?id=ZXJlcVZRR2FOS3NBc2IrVXVQUnZ5dz09" target="_blank">
-                    Ver Perfil en CMP
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </Card>
+          <ProfileCard
+            name="Dra. Mariela Milla Pimentel"
+            title="Especialista en Alergología e Inmunología Clínica"
+            role="Directora Médica"
+            image="/dra-milla.png"
+            imageAlt="Dra. Mariela Milla Pimentel"
+            academicBackground={[
+              "Médico Cirujano - Universidad Particular San Martín de Porres",
+              "Especialización en la Universidad Nacional Mayor de San Marcos",
+              "Especialista en Alergia e Inmunología Clínica - Hospital Nacional Guillermo Almenara Irigoyen",
+              "Fellowship en Alergia a Medicamentos en el Hospital De Día del Hospital Universitario La Paz de España",
+              "Alergia Respiratoria y Alimentarias en el Hospital Universitario La Paz - España",
+              "Fellowship en Inmunodeficiencias Primarias en Hospital Universitario Doce de Octubre"
+            ]}
+            experience={[
+              "Más de 15 años de experiencia en el diagnóstico y tratamiento de alergias e Inmunología",
+              "Past presidente de la Sociedad Peruana de Inmunodeficiencias Primarias (PERUSID)",
+              "Miembro de la Sociedad Peruana de Alergia, Asma e Inmunología (SPAAI)"
+            ]}
+            specialties="Asma bronquial, Rinitis alérgica, Alergias respiratorias, Alergia alimentaria, Urticaria crónica, Angioedema, Alergias a Medicamentos, Inmunodeficiencias, Inmunoterapia antialergénica, etc."
+            cmpLink="https://aplicaciones.cmp.org.pe/conoce_a_tu_medico/datos-colegiado-detallado.php?id=ZXJlcVZRR2FOS3NBc2IrVXVQUnZ5dz09"
+            isMain={true}
+          />
         </div>
 
         {/* Other Doctors */}
@@ -100,76 +55,148 @@ export default function EquipoPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Equipo de Especialistas</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=150&width=150"
-                    alt="Dra. Ana García López"
-                    width={150}
-                    height={150}
-                    className="w-full h-full object-cover"
-                  />
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg bg-white overflow-hidden">
+              <div className="relative">
+                <Image
+                  src="/placeholder.svg"
+                  alt="Dra. Ana García López"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute top-4 right-4">
+                  <div className="bg-seafoam-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    Pediátrica
+                  </div>
                 </div>
-                <CardTitle>Dra. Ana García López</CardTitle>
-                <CardDescription>Especialista en Alergología Pediátrica</CardDescription>
+              </div>
+              <CardHeader className="pb-4">
+                <CardTitle className="text-xl">Dra. Ana García López</CardTitle>
+                <CardDescription className="text-ocean-600 font-medium">Especialista en Alergología Pediátrica</CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-sm mb-4">
-                  Especialista en alergias infantiles con más de 10 años de experiencia. Experta en asma pediátrico y
-                  alergias alimentarias en niños.
-                </p>
-                <Button variant="outline" size="sm">
+              <CardContent className="pt-0">
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-start space-x-2">
+                    <GraduationCap className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Formación</p>
+                      <p className="text-xs text-gray-600">Médico Pediatra - Universidad Nacional Mayor de San Marcos</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <Award className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Experiencia</p>
+                      <p className="text-xs text-gray-600">10+ años en alergias infantiles</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <Shield className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Especialidades</p>
+                      <p className="text-xs text-gray-600">Asma pediátrico, alergias alimentarias, dermatitis atópica</p>
+                    </div>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="w-full">
                   Ver Perfil Completo
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=150&width=150"
-                    alt="Dra. Carmen Rodríguez"
-                    width={150}
-                    height={150}
-                    className="w-full h-full object-cover"
-                  />
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg bg-white overflow-hidden">
+              <div className="relative">
+                <Image
+                  src="/placeholder.svg"
+                  alt="Dra. Carmen Rodríguez"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute top-4 right-4">
+                  <div className="bg-ocean-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    Inmunología
+                  </div>
                 </div>
-                <CardTitle>Dra. Carmen Rodríguez</CardTitle>
-                <CardDescription>Inmunóloga Clínica</CardDescription>
+              </div>
+              <CardHeader className="pb-4">
+                <CardTitle className="text-xl">Dra. Carmen Rodríguez</CardTitle>
+                <CardDescription className="text-ocean-600 font-medium">Inmunóloga Clínica</CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-sm mb-4">
-                  Especialista en inmunodeficiencias y enfermedades autoinmunes. Experta en terapias biológicas y
-                  tratamientos de vanguardia.
-                </p>
-                <Button variant="outline" size="sm">
+              <CardContent className="pt-0">
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-start space-x-2">
+                    <GraduationCap className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Formación</p>
+                      <p className="text-xs text-gray-600">Especialista en Inmunología - Hospital Nacional</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <Award className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Experiencia</p>
+                      <p className="text-xs text-gray-600">8+ años en inmunodeficiencias</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <Shield className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Especialidades</p>
+                      <p className="text-xs text-gray-600">Inmunodeficiencias, enfermedades autoinmunes, terapias biológicas</p>
+                    </div>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="w-full">
                   Ver Perfil Completo
                 </Button>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardHeader>
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=150&width=150"
-                    alt="Dra. Patricia Mendoza"
-                    width={150}
-                    height={150}
-                    className="w-full h-full object-cover"
-                  />
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg bg-white overflow-hidden">
+              <div className="relative">
+                <Image
+                  src="/placeholder.svg"
+                  alt="Dra. Patricia Mendoza"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute top-4 right-4">
+                  <div className="bg-seafoam-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    Dermatología
+                  </div>
                 </div>
-                <CardTitle>Dra. Patricia Mendoza</CardTitle>
-                <CardDescription>Dermatóloga - Alergóloga</CardDescription>
+              </div>
+              <CardHeader className="pb-4">
+                <CardTitle className="text-xl">Dra. Patricia Mendoza</CardTitle>
+                <CardDescription className="text-ocean-600 font-medium">Dermatóloga - Alergóloga</CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-sm mb-4">
-                  Especialista en dermatitis atópica, urticaria y alergias cutáneas. Experta en pruebas de parche y
-                  alergias de contacto.
-                </p>
-                <Button variant="outline" size="sm">
+              <CardContent className="pt-0">
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-start space-x-2">
+                    <GraduationCap className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Formación</p>
+                      <p className="text-xs text-gray-600">Dermatóloga - Universidad Cayetano Heredia</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <Award className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Experiencia</p>
+                      <p className="text-xs text-gray-600">12+ años en dermatología alérgica</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <Shield className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Especialidades</p>
+                      <p className="text-xs text-gray-600">Dermatitis atópica, urticaria, alergias cutáneas, pruebas de parche</p>
+                    </div>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="w-full">
                   Ver Perfil Completo
                 </Button>
               </CardContent>
@@ -178,34 +205,34 @@ export default function EquipoPage() {
         </div>
 
         {/* Team Stats */}
-        <div className="bg-ocean-50 rounded-2xl p-8 mb-12">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Nuestro Compromiso con la Excelencia</h3>
+        <div className="bg-gradient-to-r from-ocean-600 to-seafoam-600 rounded-2xl p-8 mb-12 text-white">
+          <h3 className="text-2xl font-bold text-center mb-8">Nuestro Compromiso con la Excelencia</h3>
           <div className="grid md:grid-cols-4 gap-6 text-center">
-            <div>
-              <Users className="w-12 h-12 text-ocean-600 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-gray-900 mb-2">4</div>
-              <div className="text-gray-600">Especialistas</div>
+            <div className="group hover:scale-105 transition-transform duration-300">
+              <Users className="w-12 h-12 mx-auto mb-4 text-ocean-100" />
+              <div className="text-3xl font-bold mb-2">4</div>
+              <div className="text-ocean-100">Especialistas</div>
             </div>
-            <div>
-              <Award className="w-12 h-12 text-ocean-600 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-gray-900 mb-2">50+</div>
-              <div className="text-gray-600">Años de Experiencia Combinada</div>
+            <div className="group hover:scale-105 transition-transform duration-300">
+              <Award className="w-12 h-12 mx-auto mb-4 text-ocean-100" />
+              <div className="text-3xl font-bold mb-2">15+</div>
+              <div className="text-ocean-100">Años de Experiencia</div>
             </div>
-            <div>
-              <GraduationCap className="w-12 h-12 text-ocean-600 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-gray-900 mb-2">100%</div>
-              <div className="text-gray-600">Certificados por CMP</div>
+            <div className="group hover:scale-105 transition-transform duration-300">
+              <GraduationCap className="w-12 h-12 mx-auto mb-4 text-ocean-100" />
+              <div className="text-3xl font-bold mb-2">100%</div>
+              <div className="text-ocean-100">Certificados por CMP</div>
             </div>
-            <div>
-              <Shield className="w-12 h-12 text-ocean-600 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-gray-900 mb-2">5000+</div>
-              <div className="text-gray-600">Pacientes Atendidos</div>
+            <div className="group hover:scale-105 transition-transform duration-300">
+              <Shield className="w-12 h-12 mx-auto mb-4 text-ocean-100" />
+              <div className="text-3xl font-bold mb-2">5000+</div>
+              <div className="text-ocean-100">Pacientes Atendidos</div>
             </div>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="text-center p-8 bg-gray-50 rounded-2xl">
+        <div className="text-center p-8 bg-white rounded-2xl shadow-lg border border-gray-100">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Agenda tu cita con nuestros especialistas</h3>
           <p className="text-gray-600 mb-6">Recibe atención personalizada de médicos altamente calificados</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -215,7 +242,7 @@ export default function EquipoPage() {
               </Button>
             </Link>
             <Link href="/contacto">
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="border-ocean-200 text-ocean-700 [&:hover]:bg-ocean-50">
                 Contactar Equipo
               </Button>
             </Link>

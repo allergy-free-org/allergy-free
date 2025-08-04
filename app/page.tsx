@@ -8,8 +8,21 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/ocean-balance.jpg"
+            alt="Background"
+            fill
+            className="object-cover blur-sm"
+            priority
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/80 to-transparent"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
@@ -37,7 +50,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/consulta-pediatria.png?height=500&width=600"
+                src="/logo.jpg?height=500&width=600"
                 alt="Consulta médica especializada en alergias"
                 width={600}
                 height={500}
