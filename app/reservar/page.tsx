@@ -26,12 +26,24 @@ export default function ReservarPage() {
     fecha: "",
     hora: "",
     motivo: "",
+    tieneEps: "",
+    eps: "",
+    otraEps: "",
   })
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
     // Crear mensaje para WhatsApp
+    let epsInfo = "Sin EPS"
+    if (formData.tieneEps === "si") {
+      if (formData.eps === "otro") {
+        epsInfo = `EPS: ${formData.otraEps}`
+      } else {
+        epsInfo = `EPS: ${formData.eps}`
+      }
+    }
+    
     const mensaje = `Hola, quiero agendar una cita:
     
 Nombre: ${formData.nombre}
@@ -42,6 +54,7 @@ Sede: ${formData.sede}
 Modalidad: ${formData.modalidad}
 Fecha preferida: ${formData.fecha}
 Hora preferida: ${formData.hora}
+${epsInfo}
 Motivo de consulta: ${formData.motivo}`
 
     const whatsappUrl = `https://wa.me/51982915613?text=${encodeURIComponent(mensaje)}`
@@ -128,6 +141,64 @@ Motivo de consulta: ${formData.motivo}`
                     </div>
                   </div>
 
+                  {/* Información de EPS */}
+                  <div className="space-y-4">
+                    <h3 className="text-lg font-semibold text-gray-900">Información de EPS</h3>
+
+                    <div>
+                      <Label className="mb-2 block">¿Tienes EPS? *</Label>
+                      <RadioGroup
+                        value={formData.tieneEps}
+                        onValueChange={(value) => setFormData({ ...formData, tieneEps: value, eps: value === "no" ? "" : formData.eps })}
+                        className="flex space-x-6 mt-2"
+                      >
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="si" id="eps-si" />
+                          <Label htmlFor="eps-si">Sí</Label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="no" id="eps-no" />
+                          <Label htmlFor="eps-no">No</Label>
+                        </div>
+                      </RadioGroup>
+                    </div>
+
+                    {formData.tieneEps === "si" && (
+                      <div>
+                        <Label className="mb-2 block">Selecciona tu EPS *</Label>
+                        <Select
+                          value={formData.eps}
+                          onValueChange={(value) => setFormData({ ...formData, eps: value, otraEps: value !== "otro" ? "" : formData.otraEps })}
+                        >
+                          <SelectTrigger>
+                            <SelectValue placeholder="Selecciona tu EPS" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="rimac">Rímac EPS</SelectItem>
+                            <SelectItem value="pacifico">Pacífico EPS</SelectItem>
+                            <SelectItem value="mapfre">Mapfre EPS</SelectItem>
+                            <SelectItem value="sanitas">Sanitas Perú EPS</SelectItem>
+                            <SelectItem value="positiva">La Positiva EPS</SelectItem>
+                            <SelectItem value="otro">Otro</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        
+                        {formData.eps === "otro" && (
+                          <div className="mt-4">
+                            <Label htmlFor="otraEps" className="mb-2 block">Especifica tu EPS *</Label>
+                            <Input
+                              id="otraEps"
+                              value={formData.otraEps}
+                              onChange={(e) => setFormData({ ...formData, otraEps: e.target.value })}
+                              placeholder="Escribe el nombre de tu EPS"
+                              required={formData.eps === "otro"}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+
                   {/* Preferencias de Cita */}
                   <div className="space-y-4">
                     <h3 className="text-lg font-semibold text-gray-900">Preferencias de Cita</h3>
@@ -174,6 +245,7 @@ Motivo de consulta: ${formData.motivo}`
                           type="date"
                           value={formData.fecha}
                           onChange={(e) => setFormData({ ...formData, fecha: e.target.value })}
+                          min={new Date().toISOString().split('T')[0]}
                           required
                         />
                       </div>
@@ -284,7 +356,7 @@ Motivo de consulta: ${formData.motivo}`
               </CardHeader>
               <CardContent>
                 <p className="text-ocean-700 text-sm">
-                  Si tienes EPS de SANNA, puedes agendar directamente desde la app de SANNA.
+                  Si tienes EPS, podemos ayudarte a agendar tu cita. Envíanos tu información por WhatsApp y te asistiremos con el proceso de agendamiento.
                 </p>
               </CardContent>
             </Card>

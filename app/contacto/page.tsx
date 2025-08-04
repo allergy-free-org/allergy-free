@@ -87,14 +87,13 @@ ${formData.mensaje}`
                   </div>
 
                   <div>
-                    <Label htmlFor="email" className="mb-2 block">Correo electrónico *</Label>
+                    <Label htmlFor="email" className="mb-2 block">Correo electrónico</Label>
                     <Input
                       id="email"
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="tu@email.com"
-                      required
                     />
                   </div>
 
@@ -242,7 +241,7 @@ ${formData.mensaje}`
               <CardContent>
                 <div className="h-64 rounded-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.9647!2d-77.0019!3d-12.0464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce8c8c8c8c8c%3A0x8c8c8c8c8c8c8c8c!2sAv.%20Guardia%20Civil%20337%2C%20San%20Borja%2C%20Lima%2C%20Peru!5e0!3m2!1sen!2spe!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15604.982872111761!2d-77.01279308073424!3d-12.095323682326207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7d645427add%3A0x4097d4fd161a70ed!2sAv.%20Guardia%20Civil%20337%2C%20San%20Borja%2015036%2C%20Peru!5e0!3m2!1sen!2sus!4v1754278069942!5m2!1sen!2sus"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
