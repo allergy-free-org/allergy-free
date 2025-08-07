@@ -98,10 +98,12 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="[&:hover]:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-seafoam-100 rounded-lg flex items-center justify-center mb-4">
-                  <Heart className="w-6 h-6 text-seafoam-600" />
+                <div className="flex items-start gap-4 mb-2">
+                  <div className="w-10 h-10 bg-seafoam-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Heart className="w-6 h-6 text-seafoam-600" />
+                  </div>
+                  <CardTitle className="mt-1 text-lg font-semibold text-left flex-auto">Alergias Respiratorias</CardTitle>
                 </div>
-                <CardTitle>Alergias Respiratorias</CardTitle>
                 <CardDescription>
                   Diagnóstico y tratamiento de asma, rinitis alérgica y otras afecciones respiratorias
                 </CardDescription>
@@ -110,10 +112,12 @@ export default function HomePage() {
 
             <Card className="[&:hover]:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-seafoam-100 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-seafoam-600" />
+                <div className="flex items-start gap-4 mb-2">
+                  <div className="w-10 h-10 bg-seafoam-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-6 h-6 text-seafoam-600" />
+                  </div>
+                  <CardTitle className="mt-1 text-lg font-semibold text-left flex-auto">Alergias Alimentarias</CardTitle>
                 </div>
-                <CardTitle>Alergias Alimentarias</CardTitle>
                 <CardDescription>
                   Identificación y manejo de alergias a alimentos con pruebas especializadas
                 </CardDescription>
@@ -122,10 +126,12 @@ export default function HomePage() {
 
             <Card className="[&:hover]:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="w-12 h-12 bg-seafoam-100 rounded-lg flex items-center justify-center mb-4">
-                  <Award className="w-6 h-6 text-seafoam-600" />
+                <div className="flex items-start gap-4 mb-2">
+                  <div className="w-10 h-10 bg-seafoam-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Award className="w-6 h-6 text-seafoam-600" />
+                  </div>
+                  <CardTitle className="mt-1 text-lg font-semibold text-left flex-auto">Pruebas de Alergia</CardTitle>
                 </div>
-                <CardTitle>Pruebas de Alergia</CardTitle>
                 <CardDescription>
                   Prick test, pruebas intradérmicas y de provocación para diagnóstico preciso
                 </CardDescription>

@@ -52,155 +52,57 @@ export default function EquipoPage() {
 
         {/* Other Doctors */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Equipo de Especialistas</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Médicos Colaboradores</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg bg-white overflow-hidden">
-              <div className="relative">
-                <Image
-                  src="/placeholder.svg"
-                  alt="Dra. Ana García López"
-                  width={400}
-                  height={300}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute top-4 right-4">
-                  <div className="bg-seafoam-600 text-white px-3 py-1 rounded-full text-xs font-medium">
-                    Pediátrica
-                  </div>
-                </div>
-              </div>
-              <CardHeader className="pb-4">
-                <CardTitle className="text-xl">Dra. Ana García López</CardTitle>
-                <CardDescription className="text-ocean-600 font-medium">Especialista en Alergología Pediátrica</CardDescription>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <div className="space-y-3 mb-4">
-                  <div className="flex items-start space-x-2">
-                    <GraduationCap className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">Formación</p>
-                      <p className="text-xs text-gray-600">Médico Pediatra - Universidad Nacional Mayor de San Marcos</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <Award className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">Experiencia</p>
-                      <p className="text-xs text-gray-600">10+ años en alergias infantiles</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <Shield className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">Especialidades</p>
-                      <p className="text-xs text-gray-600">Asma pediátrico, alergias alimentarias, dermatitis atópica</p>
-                    </div>
-                  </div>
-                </div>
-                <Button variant="outline" size="sm" className="w-full">
-                  Ver Perfil Completo
-                </Button>
-              </CardContent>
-            </Card>
+            <ProfileCard
+              name="Dra. Silvana Fiorella Cisneros Díaz"
+              title="Especialista en Alergia e Inmunología Clínica"
+              role="Especialista"
+              academicBackground={[
+                "Médico Cirujano de la Universidad Privada San Martín de Porres",
+                "Médico especialista en Inmunología Clínica y Alergología en la Universidad Federico Villarreal, sede en el Hospital Nacional E. Rebagliati Martins"
+              ]}
+              experience={[
+                "Médico especialista en Clínica Javier Prado y Clínica Internacional San Borja"
+              ]}
+              specialties="Alergia e Inmunología Clínica"
+              cmpLink="https://aplicaciones.cmp.org.pe/conoce_a_tu_medico/datos-colegiado-detallado.php?id=RTB3aVNYVEh3SDh5cUw2SUdqS2hCUT09"
+              compact={true}
+            />
 
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg bg-white overflow-hidden">
-              <div className="relative">
-                <Image
-                  src="/placeholder.svg"
-                  alt="Dra. Carmen Rodríguez"
-                  width={400}
-                  height={300}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute top-4 right-4">
-                  <div className="bg-ocean-600 text-white px-3 py-1 rounded-full text-xs font-medium">
-                    Inmunología
-                  </div>
-                </div>
-              </div>
-              <CardHeader className="pb-4">
-                <CardTitle className="text-xl">Dra. Carmen Rodríguez</CardTitle>
-                <CardDescription className="text-ocean-600 font-medium">Inmunóloga Clínica</CardDescription>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <div className="space-y-3 mb-4">
-                  <div className="flex items-start space-x-2">
-                    <GraduationCap className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">Formación</p>
-                      <p className="text-xs text-gray-600">Especialista en Inmunología - Hospital Nacional</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <Award className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">Experiencia</p>
-                      <p className="text-xs text-gray-600">8+ años en inmunodeficiencias</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <Shield className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">Especialidades</p>
-                      <p className="text-xs text-gray-600">Inmunodeficiencias, enfermedades autoinmunes, terapias biológicas</p>
-                    </div>
-                  </div>
-                </div>
-                <Button variant="outline" size="sm" className="w-full">
-                  Ver Perfil Completo
-                </Button>
-              </CardContent>
-            </Card>
+            <ProfileCard
+              name="Dra. Ivette Sotomayor Carranza"
+              title="Especialista en Alergia e Inmunología Clínica"
+              role="Especialista"
+              academicBackground={[
+                "Médico Cirujano de la Universidad Particular San Martín de Porres",
+                "Médico especialista en Inmunología Clínica y Alergología en la Universidad Ricardo Palma, sede en el Hospital Militar Central"
+              ]}
+              experience={[
+                "Hospital Militar Central"
+              ]}
+              specialties="Alergia e Inmunología Clínica"
+              cmpLink="https://aplicaciones.cmp.org.pe/conoce_a_tu_medico/datos-colegiado-detallado.php?id=UnA4YUFuRWZNb2ZBZWl6RHZDY3RaZz09"
+              compact={true}
+            />
 
-            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg bg-white overflow-hidden">
-              <div className="relative">
-                <Image
-                  src="/placeholder.svg"
-                  alt="Dra. Patricia Mendoza"
-                  width={400}
-                  height={300}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute top-4 right-4">
-                  <div className="bg-seafoam-600 text-white px-3 py-1 rounded-full text-xs font-medium">
-                    Dermatología
-                  </div>
-                </div>
-              </div>
-              <CardHeader className="pb-4">
-                <CardTitle className="text-xl">Dra. Patricia Mendoza</CardTitle>
-                <CardDescription className="text-ocean-600 font-medium">Dermatóloga - Alergóloga</CardDescription>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <div className="space-y-3 mb-4">
-                  <div className="flex items-start space-x-2">
-                    <GraduationCap className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">Formación</p>
-                      <p className="text-xs text-gray-600">Dermatóloga - Universidad Cayetano Heredia</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <Award className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">Experiencia</p>
-                      <p className="text-xs text-gray-600">12+ años en dermatología alérgica</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <Shield className="w-4 h-4 text-ocean-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="text-sm font-medium text-gray-900">Especialidades</p>
-                      <p className="text-xs text-gray-600">Dermatitis atópica, urticaria, alergias cutáneas, pruebas de parche</p>
-                    </div>
-                  </div>
-                </div>
-                <Button variant="outline" size="sm" className="w-full">
-                  Ver Perfil Completo
-                </Button>
-              </CardContent>
-            </Card>
+            <ProfileCard
+              name="Dra. Claudia Renteria Valdiviezo"
+              title="Especialista en Alergia e Inmunología Clínica"
+              role="Especialista"
+              academicBackground={[
+                "Médico Cirujano de la Universidad Nacional de Piura",
+                "Médico especialista en Inmunología Clínica y Alergología en la Universidad Nacional Mayor de San Marcos, sede en el Hospital Nacional Edgardo Rebagliati Martins"
+              ]}
+              experience={[
+                "Hospital del Niño en Breña",
+                "Instituto Hematológico de Piura"
+              ]}
+              specialties="Alergia e Inmunología Clínica"
+              cmpLink="https://aplicaciones.cmp.org.pe/conoce_a_tu_medico/datos-colegiado-detallado.php?id=RHZ3ZlhFdk9ZeU55dS9rVUpMSVdVQT09"
+              compact={true}
+            />
           </div>
         </div>
 
