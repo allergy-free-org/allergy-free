@@ -115,39 +115,35 @@ export default function ProfileCard({
 
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg bg-white overflow-hidden">
-      <div className="md:flex">
-        {image && (
-          <div className="md:w-1/3 relative p-6">
-            <Image
-              src={image}
-              alt={imageAlt || name}
-              width={300}
-              height={400}
-              className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-lg"
-            />
+      <div className="flex flex-col lg:flex-row lg:items-center">
+                {image && (
+          <div className="lg:w-2/5 xl:w-1/3 relative p-4 lg:p-6 flex-shrink-0 flex items-center">
+            <div className="relative w-full h-80 sm:h-96 md:h-[400px] lg:h-[500px] xl:h-[600px]">
+               <Image
+                 src={image}
+                 alt={imageAlt || name}
+                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300 rounded-lg shadow-md"
+                 fill
+               />
+             </div>
           </div>
         )}
         
-        <div className={`${image ? 'md:w-2/3' : 'w-full'} p-8`}>
-          <div className="flex items-center mb-6">
-            <div className="w-12 h-12 bg-ocean-100 rounded-full flex items-center justify-center mr-4">
-              <Award className="w-6 h-6 text-ocean-600" />
-            </div>
-            <span className="text-ocean-600 font-semibold text-lg">{role}</span>
-          </div>
+        <div className={`${image ? 'lg:w-3/5 xl:w-2/3' : 'w-full'} p-4 lg:p-8`}>
           
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">{name}</h2>
-          <p className="text-xl text-gray-600 mb-6">{title}</p>
+          
+          <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-2">{name}</h2>
+          <p className="text-lg lg:text-xl xl:text-2xl text-gray-600 mb-4 lg:mb-6">{title}</p>
 
-          <div className="space-y-6 mb-8">
-            <div className="flex items-start space-x-4">
-              <GraduationCap className="w-6 h-6 text-ocean-600 mt-1 flex-shrink-0" />
+          <div className="space-y-4 lg:space-y-6 mb-6 lg:mb-8">
+            <div className="flex items-start space-x-3 lg:space-x-4">
+              <GraduationCap className="w-5 h-5 lg:w-6 lg:h-6 text-ocean-600 mt-1 flex-shrink-0" />
               <div className="flex-1">
-                <h4 className="font-semibold text-gray-900 mb-3">Formación Académica</h4>
-                <ul className="text-gray-600 space-y-2 text-sm leading-relaxed">
+                <h4 className="font-semibold text-gray-900 mb-2 lg:mb-3 text-sm lg:text-base xl:text-lg">Formación Académica</h4>
+                <ul className="text-gray-600 space-y-1.5 lg:space-y-2 text-xs lg:text-sm xl:text-base leading-relaxed">
                   {academicBackground.map((item, index) => (
                     <li key={index} className="flex items-start">
-                      <span className="text-ocean-500 mr-3 mt-1">•</span>
+                      <span className="text-ocean-500 mr-2 lg:mr-3 mt-1">•</span>
                       <span className="flex-1">{item}</span>
                     </li>
                   ))}
@@ -155,14 +151,14 @@ export default function ProfileCard({
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
-              <Award className="w-6 h-6 text-ocean-600 mt-1 flex-shrink-0" />
+            <div className="flex items-start space-x-3 lg:space-x-4">
+              <Award className="w-5 h-5 lg:w-6 lg:h-6 text-ocean-600 mt-1 flex-shrink-0" />
               <div className="flex-1">
-                <h4 className="font-semibold text-gray-900 mb-3">Actividad Asistencial</h4>
-                <ul className="text-gray-600 space-y-2 text-sm leading-relaxed">
+                <h4 className="font-semibold text-gray-900 mb-2 lg:mb-3 text-sm lg:text-base xl:text-lg">Actividad Asistencial</h4>
+                <ul className="text-gray-600 space-y-1.5 lg:space-y-2 text-xs lg:text-sm xl:text-base leading-relaxed">
                   {experience.map((item, index) => (
                     <li key={index} className="flex items-start">
-                      <span className="text-ocean-500 mr-3 mt-1">•</span>
+                      <span className="text-ocean-500 mr-2 lg:mr-3 mt-1">•</span>
                       <span className="flex-1">{item}</span>
                     </li>
                   ))}
@@ -170,36 +166,17 @@ export default function ProfileCard({
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
-              <Shield className="w-6 h-6 text-ocean-600 mt-1 flex-shrink-0" />
+            <div className="flex items-start space-x-3 lg:space-x-4">
+              <Shield className="w-5 h-5 lg:w-6 lg:h-6 text-ocean-600 mt-1 flex-shrink-0" />
               <div className="flex-1">
-                <h4 className="font-semibold text-gray-900 mb-3">Especialidades</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{specialties}</p>
+                <h4 className="font-semibold text-gray-900 mb-2 lg:mb-3 text-sm lg:text-base xl:text-lg">Especialidades</h4>
+                <p className="text-gray-600 text-xs lg:text-sm xl:text-base leading-relaxed">{specialties}</p>
               </div>
             </div>
-
-            {(phone || email || location) && (
-              <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 text-ocean-600 mt-1 flex-shrink-0">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-semibold text-gray-900 mb-3">Contacto</h4>
-                  <div className="space-y-2 text-sm">
-                    {location && (
-                      <p className="text-gray-600 flex items-center">
-                        <MapPin className="w-4 h-4 mr-3 text-ocean-500" />
-                        {location}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
 
           {cmpLink && (
-            <Button asChild className="bg-ocean-600 hover:bg-ocean-700">
+            <Button asChild className="bg-ocean-600 hover:bg-ocean-700 text-sm lg:text-base xl:text-lg px-4 lg:px-6 xl:px-8 py-2 lg:py-3 xl:py-4">
               <Link href={cmpLink} target="_blank">
                 Ver Perfil en CMP
               </Link>

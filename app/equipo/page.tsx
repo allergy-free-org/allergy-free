@@ -56,7 +56,7 @@ export default function EquipoPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProfileCard
-              name="Dra. Silvana Fiorella Cisneros Díaz"
+              name="Dra. Silvana Cisneros Díaz"
               title="Especialista en Alergia e Inmunología Clínica"
               role="Especialista"
               academicBackground={[

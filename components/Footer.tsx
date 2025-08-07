@@ -27,9 +27,6 @@ export default function Footer() {
               <Link href="/faq" className="block text-ocean-200 [&:hover]:text-white">
                 FAQ
               </Link>
-              <Link href="/noticias" className="block text-ocean-200 [&:hover]:text-white">
-                Noticias
-              </Link>
             </div>
           </div>
 
