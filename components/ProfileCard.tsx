@@ -1,21 +1,17 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Award, GraduationCap, Shield, MapPin, Phone, Mail, User } from "lucide-react"
+import { Award, GraduationCap, Shield, User } from "lucide-react"
 import Image from "next/image"
 
 interface ProfileCardProps {
   name: string
   title: string
-  role: string
   image?: string
   imageAlt?: string
   academicBackground: string[]
   experience: string[]
   specialties: string
-  phone?: string
-  email?: string
-  location?: string
   cmpLink?: string
   isMain?: boolean
   compact?: boolean
@@ -24,15 +20,11 @@ interface ProfileCardProps {
 export default function ProfileCard({
   name,
   title,
-  role,
   image,
   imageAlt,
   academicBackground,
   experience,
   specialties,
-  phone,
-  email,
-  location,
   cmpLink,
   isMain = false,
   compact = false

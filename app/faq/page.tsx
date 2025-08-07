@@ -1,10 +1,8 @@
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { ArrowLeft, Shield, ChevronDown, HelpCircle } from "lucide-react"
-import Navigation from "@/components/Navigation"
+import { ArrowLeft, ChevronDown, HelpCircle } from "lucide-react"
 
 export default function FAQPage() {
   const faqs = [

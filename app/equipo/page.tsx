@@ -1,9 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeft, Shield, Award, GraduationCap, Users, MapPin, Phone, Mail } from "lucide-react"
-import Image from "next/image"
-import Navigation from "@/components/Navigation"
+import { ArrowLeft, Shield, Award, GraduationCap, Users } from "lucide-react"
 import ProfileCard from "@/components/ProfileCard"
 
 export default function EquipoPage() {
@@ -28,7 +25,6 @@ export default function EquipoPage() {
           <ProfileCard
             name="Dra. Mariela Milla Pimentel"
             title="Especialista en Alergología e Inmunología Clínica"
-            role="Directora Médica"
             image="/dra-milla.png"
             imageAlt="Dra. Mariela Milla Pimentel"
             academicBackground={[
@@ -58,7 +54,6 @@ export default function EquipoPage() {
             <ProfileCard
               name="Dra. Silvana Cisneros Díaz"
               title="Especialista en Alergia e Inmunología Clínica"
-              role="Especialista"
               academicBackground={[
                 "Médico Cirujano de la Universidad Privada San Martín de Porres",
                 "Médico especialista en Inmunología Clínica y Alergología en la Universidad Federico Villarreal, sede en el Hospital Nacional E. Rebagliati Martins"
@@ -74,7 +69,6 @@ export default function EquipoPage() {
             <ProfileCard
               name="Dra. Ivette Sotomayor Carranza"
               title="Especialista en Alergia e Inmunología Clínica"
-              role="Especialista"
               academicBackground={[
                 "Médico Cirujano de la Universidad Particular San Martín de Porres",
                 "Médico especialista en Inmunología Clínica y Alergología en la Universidad Ricardo Palma, sede en el Hospital Militar Central"
@@ -90,7 +84,6 @@ export default function EquipoPage() {
             <ProfileCard
               name="Dra. Claudia Renteria Valdiviezo"
               title="Especialista en Alergia e Inmunología Clínica"
-              role="Especialista"
               academicBackground={[
                 "Médico Cirujano de la Universidad Nacional de Piura",
                 "Médico especialista en Inmunología Clínica y Alergología en la Universidad Nacional Mayor de San Marcos, sede en el Hospital Nacional Edgardo Rebagliati Martins"
